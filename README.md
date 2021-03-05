@@ -6,18 +6,18 @@ from automated mapping in the Lilstock (Bristol Channel) limestone outcrops". Th
 The code uses certain functions from the Geom2D Toolbox by David Legland (see https://nl.mathworks.com/matlabcentral/fileexchange/7844-geom2d).
 
 -------------CONTENTS------------------------------
-1. Loading a shapefile and converting it to a graph
-2. Fixing three types of common topological discontinuites
-2.1 Type-1 discontinuity fix
-2.2 Type-2 discontinuity fix
-2.3 Type-3 discontinuity fix
-3. Resolving artificial fragmentation in shapefile attribute tables
+1. Loading a shapefile and converting it to a graph: 2D fracture networks are often saved in the ESRI shapefile format in the form of polylines. These are converted to graph structures with edges and nodes. Spatial positioning information corresponding to each node makes it a spatial graph
+2. Fixing three types of common topological discontinuites: Automatic detection lead to certain topological discontinuities that needs to be resolved so that network metrics can be applied.
+2.1 Type-1 discontinuity fix: fracture with a degree-3 node is incorrectly represented as a degree-2 node in close proximity to a degree-1 node
+2.2 Type-2 discontinuity fix: three degree-1 nodes lie in close proximity
+2.3 Type-3 discontinuity fix: two degree-2 nodes lie in close proximity with sharp angles
+3. Resolving artificial fragmentation in shapefile attribute tables: Vectorized traces may be topologically connected but fragmented and this artificial fragmentation is resolved.
 4. Resolving Stepouts within fracture graphs
-4.1 Resolving stepouts using merge operation
-4.2 Resolving stepouts using flatten operation
-5. Straightening fracture segments (removing degree-2 nodes)
-6. Converting fracture graphs to geologically-significant fracture traces
-7. Converting primals graphs to dual graph representations
+4.1 Resolving stepouts using merge operation: Merging a stepout reduces two degree-3 nodes into a degree-4 node 
+4.2 Resolving stepouts using flatten operation: Stepouts based on length threshold and based on two additional inputs of angle and orthogonal range are flattened
+5. Straightening fracture segments (removing degree-2 nodes): when converting a shapefile to a graph, there are a large number of degree-2 nodes. These represent the natural   sinuousity of fracture traces. Within the graph representation, they increase the size of the graph and on some occasion we would like to remove these degree-2nodes while retaining the overall graph structure
+6. Converting fracture graphs to geologically-significant fracture traces: A fracture from tip-to-tip can be identified from a series of graph edges provided they are continuous in terms of edge angle. An input threshold strike angle is set and the function identifies a set of fracture edges that are within the threshold
+7. Converting primals graphs to dual graph representations: In the primal graph representation, intersections between the fractures and fracture tips are regarded as nodes with the edges being fracture segments between the nodes. This primal representation can be converted into a dual graph where a fracture from tip-to-tip represent nodes and intersection between fractures are edges
 
 functions list:
 Shape_to_Data, build_shp_struct, chain_to_edges, collapse_stepouts,compute_chain_length, create_GraphEdges, find_I_M_possible_edges,find_geologically_significant_traces, find_kinked_M_Node_connections,find_kinked_M_Nodes, find_small_I_I_I_trielements_AR, find_stepout_motif,fix_graph_type_5_disconnection, fix_graph_type_8_disconnection,
