@@ -1,6 +1,6 @@
 # Fracture-Graphs
 
-This repository contains MATLAB code and functions that forms the Code supplement to the manuscript titled, "Large-scale natural fracture network patterns: Insights
+This repository contains MATLAB code and functions that forms the Code supplement to the manuscript titled, "Prabhakaran et al (2021), Large-scale natural fracture network patterns: Insights
 from automated mapping in the Lilstock (Bristol Channel) limestone outcrops". The Code_Supplement.m script showcases the use of graph-based methods to read-in shapefiles and manipulate them using graph algorithms.
 
 The code uses certain functions from the Geom2D Toolbox by David Legland (see https://nl.mathworks.com/matlabcentral/fileexchange/7844-geom2d).
