@@ -18,5 +18,5 @@ from automated mapping in the Lilstock (Bristol Channel) limestone outcrops". Th
 7. Converting primals graphs to dual graph representations: In the primal graph representation, intersections between the fractures and fracture tips are regarded as nodes with the edges being fracture segments between the nodes. This primal representation can be converted into a dual graph where a fracture from tip-to-tip represent nodes and intersection between fractures are edges
 
 functions list:
-Shape_to_Data, build_shp_struct, chain_to_edges, collapse_stepouts,compute_chain_length, create_GraphEdges, find_I_M_possible_edges,find_geologically_significant_traces, find_kinked_M_Node_connections,find_kinked_M_Nodes, find_small_I_I_I_trielements_AR, find_stepout_motif,fix_graph_type_5_disconnection, fix_graph_type_8_disconnection,
-flatten_stepouts, resolve_artificial_fragmentation, straighten_graph
+build_shp_struct, chain_to_edges, check_bifurcations, check_if_line_graph, collapse_stepouts, compute_chain_length, compute_chain_strike2, compute_strike, create_GraphEdges, create_subgraph, edges_to_chain, find_chain, find_geologically_significant_traces, find_I_M_possible_edges, find_kinked_M_Node_connections, find_kinked_M_Nodes, find_small_I_I_I_trielements_AR, find_stepout_motif, find_walk, fix_graph_type_5_disconnection, fix_graph_type_8_disconnection,
+flatten_stepouts, isinrange_atleast, Lengths2D, resolve_artificial_fragmentation, Shape_to_Data, straighten_graph, tri_aspect_ratio, update_after_collapse
