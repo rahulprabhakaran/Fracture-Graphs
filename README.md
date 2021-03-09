@@ -1,7 +1,7 @@
 # Fracture-Graphs
 
 This repository contains MATLAB code and functions that forms the Code supplement to the manuscript titled, "Prabhakaran et al (2021), Large-scale natural fracture network patterns: Insights
-from automated mapping in the Lilstock (Bristol Channel) limestone outcrops". The Code_Supplement.m script showcases the use of graph-based methods to read-in shapefiles and manipulate them using graph algorithms. Functions from the Geom2D Toolbox by David Legland (see https://nl.mathworks.com/matlabcentral/fileexchange/7844-geom2d). MATLAB Mapping toolbox is required to read and write shapefiles. The Data folder contains *.mat & *.shp files which are used as examples to illustrate the working of the code. The data may be downloaded and paths set accordingly by the user.
+from automated mapping in the Lilstock (Bristol Channel) limestone outcrops". The Code_Supplement.m script showcases the use of graph-based methods to read-in shapefiles and manipulate them using graph algorithms. Functions from the Geom2D Toolbox by David Legland (see https://nl.mathworks.com/matlabcentral/fileexchange/7844-geom2d) are used. MATLAB Mapping toolbox is required to read and write shapefiles. The Data folder contains *.mat & *.shp files which are used as examples to illustrate the working of the code. The data may be downloaded and paths set accordingly by the user.
 
 -------------CONTENTS------------------------------
 1. Loading a shapefile and converting it to a graph: 2D fracture networks are often saved in the ESRI shapefile format in the form of polylines. These are converted to graph structures with edges and nodes. Spatial positioning information corresponding to each node makes it a spatial graph
