@@ -41,7 +41,7 @@ for i=1:numel(Edges_G3_copy(:,1))
    edge_idx2 = find(edge_counter(edge_idx1,3)==1);  % finding edges in "on" condition
    Edges = Edges(edge_idx2,:);                      % extracting only "on" edges
    edge_idx1 = edge_idx1(edge_idx2,1);              % idx of "on" edges
-   path_graph = create_subgraph(unique(Edges,'stable')',G3);
+   path_graph = create_subgraph(unique(Edges,'stable')',G3,XY3);
    % checks: if subgraph is not a line graph and is not empty
    if path_graph.numnodes~=0 && path_graph.numedges~=0 && check_if_line_graph(path_graph)==0
        bif{m,1} = path_graph;
